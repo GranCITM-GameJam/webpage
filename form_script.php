@@ -18,7 +18,7 @@ print "<h1 align=center>Thank you for submitting your email address!</h1>";
 <title>ThankYou Page</title>    
 </head>
 <body>
-<h1><a href="form.html">GO BACK</a> </h1>    
+<h1><a href="index.html">GO BACK</a> </h1>    
     
 </body>
 

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Gran CITM Game Jam</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+.selectable {background-color: #0dbad1; font-size: 28px; padding: 30px 30px; width: 100%; text-align: left; margin-bottom: 10px;} /*Cyan*/
+.selectable:hover {background-color: #76e6f5;}
+.previous { background-color: #ffffff; color: black;}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+}
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: left;
+}
+.container:hover .overlay {
+  opacity: 1;
+  height:75%;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-cyan w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="../index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Inici</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Edicions Previes</a>
+    <a href="../about_us.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Nosaltres</a>
+    <a href="../contact.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contacte</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="../index.html" class="w3-bar-item w3-button w3-padding-large">Inici</a>
+    <a href="../about_us.html" class="w3-bar-item w3-button w3-padding-large">Nosaltres</a>
+    <a href="../contact.html" class="w3-bar-item w3-button w3-padding-large">Contacte</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-black w3-center" style="padding:16px 0px 32px">
+  <link rel="icon" href="media/images/icon.png" type="image/x-icon">
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-black w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+	  <a href="../previous.html" class="w3-button previous"><</a>
+	 </div>
+	 <div class="w3-twothird">
+      <b style="font-size:70px">Primera edició</b>
+	  
+	  <div class="w3-half">
+		<p style="font-size:38px">Participants: 52</p>
+	  </div>
+	  <div = class="w3-half">
+		<p style="font-size:38px">Equips: 13</p>
+	  </div>
+	</div>
+  </div>
+</div>
+
+<div class="w3-row-padding w3-dark-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+	
+	<div class="w3-row-padding w3-margin-top">
+	  <div class="w3-third">
+		 <div class="w3-card container">
+			<img src="../media/images/icon.png" class="image">
+			<div class="overlay">
+				<h5>FirestoreListener</h5>
+				<ul>
+				  <li>Sandra Alvarez</li>
+				  <li>Víctor Masó</li>
+				  <li>Guillem Costa</li>
+				  <li>Guillermo García</li>
+				</ul>
+			</div>
+		 </div>
+	  </div>
+	
+	  <div class="w3-third">
+		 <div class="w3-card container">
+			<img src="../media/images/icon.png" class="image">
+			<div class="overlay">
+				<h5>The Cells</h5>
+				<ul>
+				  <li>Miquel Suau</li>
+				  <li>Bernat Casañas</li>
+				  <li>Jordi Pardo</li>
+				  <li>Alex Perdices</li>
+				</ul>
+			</div>
+		 </div>
+	  </div>
+	
+	  <div class="w3-third">
+		 <div class="w3-card container">
+			<img src="../media/images/icon.png" class="image">
+			<div class="overlay">
+				<h5>Trauma</h5>
+				<ul>
+				  <li>Nil Solana</li>
+				  <li>Lluís Bofill</li>
+				  <li>Nerea Hernández</li>
+				  <li>Alessandro Mancinelli</li>
+				</ul>
+			</div>
+		 </div>
+	  </div>
+	</div>
+	
+	<div class="w3-row-padding w3-margin-top">
+	  <div class="w3-third">
+		 <div class="w3-card container">
+			<img src="../media/images/icon.png" class="image">
+			<div class="overlay">
+				<h5>Alma Ceax</h5>
+				<ul>
+				  <li>Cere Venteo</li>
+				  <li>Alejandro París</li>
+				  <li>Marc Guillén</li>
+				  <li>Axel Alavedra</li>
+				</ul>
+			</div>
+		 </div>
+	  </div>
+	
+	  <div class="w3-third">
+		 <div class="w3-card container">
+			<img src="../media/images/icon.png" class="image">
+			<div class="overlay">
+				<h5>Los Pirillosu</h5>
+				<ul>
+				  <li>Asier Arellano</li>
+				  <li>Roger Tello</li>
+				  <li>Pau Bonet</li>
+				  <li>Rodrigo de Pedro</li>
+				</ul>
+			</div>
+		 </div>
+	  </div>
+	
+	  <div class="w3-third">
+		 <div class="w3-card container">
+			<img src="../media/images/icon.png" class="image">
+			<div class="overlay">
+				<h5>Margeli's Team</h5>
+				<ul>
+				  <li>Carles Margeli</li>
+				  <li>Norman Benet</li>
+				  <li>Pol Ferrando</li>
+				  <li>Albert Mas</li>
+				</ul>
+			</div>
+		 </div>
+	  </div>
+	</div>
+	
+	<div class="w3-row-padding w3-margin-top">
+	  <div class="w3-third">
+		 <div class="w3-card container">
+			<img src="../media/images/icon.png" class="image">
+			<div class="overlay">
+				<h5>BordePunto</h5>
+				<ul>
+				  <li>Lorién Portella</li>
+				  <li>Lucas García</li>
+				  <li>Jaume Surís</li>
+				  <li>Joel Cabaco</li>
+				</ul>
+			</div>
+		 </div>
+	  </div>
+	
+	  <div class="w3-third">
+		 <div class="w3-card container">
+			<img src="../media/images/icon.png" class="image">
+			<div class="overlay">
+				<h5>Map.h</h5>
+				<ul>
+				  <li>Alex Campamar</li>
+				  <li>Aleix Gabarró</li>
+				  <li>Joan Valiente</li>
+				  <li>David Lozano</li>
+				</ul>
+			</div>
+		 </div>
+	  </div>
+	
+	  <div class="w3-third">
+		 <div class="w3-card container">
+			<img src="../media/images/icon.png" class="image">
+			<div class="overlay">
+				<h5>Jam Burgers</h5>
+				<ul>
+				  <li>Eric Gabella</li>
+				  <li>Saile Wu</li>
+				  <li>Oscar Martínez</li>
+				  <li>Roger Beltran</li>
+				</ul>
+			</div>
+		 </div>
+	  </div>
+	</div>
+	
+	<div class="w3-row-padding w3-margin-top">
+	  <div class="w3-third">
+		 <div class="w3-card container">
+			<img src="../media/images/icon.png" class="image">
+			<div class="overlay">
+				<h5>Gran Staff</h5>
+				<ul>
+				  <li>Pol Carrera</li>
+				  <li>Genís Bayó</li>
+				  <li>Max garcia</li>
+				  <li>Adrià Ferrer</li>
+				</ul>
+			</div>
+		 </div>
+	  </div>
+	
+	  <div class="w3-third">
+		 <div class="w3-card container">
+			<img src="../media/images/icon.png" class="image">
+			<div class="overlay">
+				<h5>Equip 11</h5>
+				<ul>
+				  <li>Marc Fabián</li>
+				  <li>Roger Sanchez</li>
+				  <li>Marc Gálvez</li>
+				  <li>Alejandro Gamarra</li>
+				</ul>
+			</div>
+		 </div>
+	  </div>
+	
+	  <div class="w3-third">
+		 <div class="w3-card container">
+			<img src="../media/images/icon.png" class="image">
+			<div class="overlay">
+				<h5>Equip 12</h5>
+				<ul>
+				  <li>Alex Morales</li>
+				  <li>Yessica Servin</li>
+				  <li>Josep Pi</li>
+				  <li>Daniel Cabello</li>
+				</ul>
+			</div>
+		 </div>
+	  </div>
+	</div>
+	
+	<div class="w3-row-padding w3-margin-top">
+	  <div class="w3-third">
+		 <div class="w3-card container">
+			<img src="../media/images/icon.png" class="image">
+			<div class="overlay">
+				<h5>Equip 13</h5>
+				<ul>
+				  <li>Jaume Montagut</li>
+				  <li>Christian Martínez</li>
+				  <li>David Franco</li>
+				  <li>José Antonio</li>
+				</ul>
+			</div>
+		 </div>
+	  </div>	
+	</div>
+	
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+  <div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+ </div>
+ <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>

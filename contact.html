@@ -13,7 +13,37 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
 .selectable {background-color: #0dbad1; font-size: 28px; padding: 30px 30px; width: 100%; text-align: left; margin-bottom: 10px;} /*Cyan*/
 .selectable:hover {background-color: #76e6f5;}
-.previous { background-color: #1c1c1c; color: white;}
+.previous { background-color: #ffffff; color: black;}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+}
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: left;
+}
+.container:hover .overlay {
+  opacity: 1;
+  height:75%;
+}
 </style>
 <body>
 
@@ -40,12 +70,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <link rel="icon" href="media/images/icon.png" type="image/x-icon">
 </header>
 
+<div class="w3-row-padding w3-black w3-padding-24 w3-container">
+  <div class="w3-margin-left">
+     <h1 style="font-size:50px">Contacte</h1>
+  </div>
+</div>
+
 <!-- First Grid -->
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
   <div class="w3-content">
-    <div class="w3-twothird">
-      <h1>Contacte</h1>
-    </div>
+  
   </div>
 </div>
 

@@ -13,7 +13,37 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
 .selectable {background-color: #0dbad1; font-size: 28px; padding: 30px 30px; width: 100%; text-align: left; margin-bottom: 10px;} /*Cyan*/
 .selectable:hover {background-color: #76e6f5;}
-.previous { background-color: #1c1c1c; color: white;}
+.previous { background-color: #ffffff; color: black;}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 200px;
+}
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: left;
+}
+.container:hover .overlay {
+  opacity: 1;
+  height:30%;
+}
 </style>
 <body>
 
@@ -40,12 +70,83 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <link rel="icon" href="media/images/icon.png" type="image/x-icon">
 </header>
 
-<!-- First Grid -->
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+<div class="w3-row-padding w3-black w3-padding-24 w3-container">
+  <div class="w3-margin-left">
+     <h1 style="font-size:50px">Nosaltres</h1>
+  </div>
+</div>
+
+
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
   <div class="w3-content">
-    <div class="w3-twothird">
-      <h1>Nosaltres</h1>
+    <h1>Qui som?</h1>
+    <div class="w3-twothird">           
+      <p class="w3-text-dark-grey">Som un grup d'estudiants del grau de videojocs a Barcelona que volien participar en Game Jams.  
+	  El problema era que no n'hi havia cap a Barcelona ni voltants.</p>
+	  <p class="w3-text-dark-grey">Així que vam decidir crear la nostra propia Game Jam amb l'ajuda de la UPC i destinada a tots els
+	  estudiants dels diferents graus del CITM, tant de videojocs com multimedia.</p>
+	  <p class="w3-text-dark-grey">Vam començar sent quatre membres a la organització, però el procés era llarg i complicat.
+	  Al iniciar quart curs i veure que ens quedava poc temps dintre la universitat, vam decidir contactar estudiants de cursos més baixos que fosin implicats i amb
+	  ganes d'ajudar-nos a organitzar.</p>
+	  <p class="w3-text-dark-grey">No voliem que la Game Jam morís un cop nosaltres marxesim, sinó que s'establís com una tradició del CITM.</p>
+	  <p class="w3-text-dark-grey">Per això és feina dels organitzadors de quart curs reclutar nous membres que s'encarreguin de la Jam un cop ells marxin.</p>
     </div>
+
+    <div class="w3-third w3-center">
+      <img src="media/images/citm.png" style="border-radius: 50px">
+    </div>	
+  </div>
+</div>
+
+<div class="w3-light-grey w3-container">
+	<div class="w3-content">
+		<hr style="border-top: 2px solid #999999"/>
+	</div>
+</div>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
+  <!-- Images -->
+  <div class="w3-content">
+	<h1>Els fundadors</h1>
+	
+	<div class="w3-row-padding w3-margin-top">
+	  <div class="w3-quarter">
+		 <div class="w3-card container">
+			<img src="media/images/max.png" class="image">
+			<div class="overlay">
+				<h5>Max Garcia</h5>
+			</div>
+		 </div>
+	  </div>
+	
+	  <div class="w3-quarter">
+		 <div class="w3-card container">
+			<img src="media/images/adria.png" class="image">
+			<div class="overlay">
+				<h5>Adrià Ferrer</h5>
+			</div>
+		 </div>
+	  </div>
+	
+	  <div class="w3-quarter">
+		 <div class="w3-card container">
+			<img src="media/images/pol.png" class="image">
+			<div class="overlay">
+				<h5>Pol Carrera</h5>
+			</div>
+		 </div>
+	  </div>
+	  
+	  <div class="w3-quarter">
+		 <div class="w3-card container">
+			<img src="media/images/genis.png" class="image">
+			<div class="overlay">
+				<h5>Genís Bayó</h5>
+			</div>
+		 </div>
+	  </div>
+	</div>
   </div>
 </div>
 

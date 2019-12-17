@@ -79,7 +79,20 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <!-- First Grid -->
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
   <div class="w3-content">
-  
+<form method="post" action="https://grancitm-gamejam.github.io/webpage/FormMail.pl" accept-charset="ISO-8859-1" onsubmit="var   originalCharset = document.charset; document.charset = 'ISO-8859-1';
+  window.onbeforeunload = function (){document.charset=originalCharset;};">:
+
+    Your Name    <input name="realname" />
+    Your Email   <input name="email"    /> 
+    Your Message 
+     <textarea cols="40" rows="10" name="Message">
+     </textarea> 
+     <input type="submit" value="Send" /> 
+     <input type="hidden" name="recipient" value="grancitm.gamejam@gmail.com" />
+    <input type="hidden" name="subject" value="Test Email" />
+    <input type="hidden" name="required" value="realname,email,Message" />
+
+</form>
   </div>
 </div>
 

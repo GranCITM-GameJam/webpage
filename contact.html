@@ -44,6 +44,57 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   opacity: 1;
   height:75%;
 }
+input {
+  width: 50%;
+  padding: 8px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  background-color: #f8f8f8;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  border-radius: 2px;
+}
+
+input:focus {
+  border: 3px solid #555;
+}
+select {
+  width: 50%;
+  padding: 8px 10px;
+  border: 3px solid #ccc;
+  background-color: #f8f8f8;
+  border-radius: 2px;
+}
+select:focus {
+  border: 3px solid #555;
+}
+textarea {
+  width: 50%;
+  height: 150px;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 2px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  min-height: 50px;
+  max-height: 300px;
+  min-width: 50%;
+  max-width: 100%;
+}
+.submit {
+  width: 25%;
+  border-radius: 2px;
+  background-color: #0dbad1;
+}
+
+.submit:hover{
+  border: 3px solid #555;
+  background-color: #5ee1f2;
+}
+
 </style>
 <body>
 
@@ -79,18 +130,24 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <!-- First Grid -->
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
   <div class="w3-content">
-<form method="post" action="https://grancitm-gamejam.github.io/webpage/FormMail.pl" accept-charset="ISO-8859-1" onsubmit="var   originalCharset = document.charset; document.charset = 'ISO-8859-1';
-  window.onbeforeunload = function (){document.charset=originalCharset;};">:
+  <h1>Contactan's</h1>
+<form id="fs-frm" name="department-contact-form" accept-charset="utf-8" action="https://formspree.io/xgeooeqq" method="post">
 
-    Your Name    <input name="realname" />
-    Your Email   <input name="email"    /> 
-    Your Message 
-     <textarea cols="40" rows="10" name="Message">
-     </textarea> 
-     <input type="submit" value="Send" /> 
-     <input type="hidden" name="recipient" value="grancitm.gamejam@gmail.com" />
-    <input type="hidden" name="subject" value="Test Email" />
-    <input type="hidden" name="required" value="realname,email,Message" />
+    <label class="w3-text-dark-grey" for="full-name">Nom i cognom:</label><br />
+    <input class="w3-text-dark-grey" type="text" name="Nom" id="full-name" placeholder="Nom i cognom" required=""><br />
+    <label class="w3-text-dark-grey" for="email-address">Correu:</label><br />
+    <input class="w3-text-dark-grey" type="email" name="Enviat per" id="email-address" placeholder="email@gmail.com" required=""><br />
+    <label class="w3-text-dark-grey" for="department">Motiu:</label><br />
+    <select name="Motiu" id="department" required="">
+      <option class="w3-text-dark-grey" value="Select" selected="" disabled="">Tria'n un</option>
+      <option class="w3-text-dark-grey" value="Consulta">Consulta</option>
+      <option class="w3-text-dark-grey" value="Organització">Vull unir-me a la organització</option>
+    </select><br /><br />
+    <label class="w3-text-dark-grey" for="message">Missatge:</label><br />
+    <textarea rows="5" name="Missatge" id="message" placeholder="Escriu aquí el teu missatge" required=""></textarea><br />
+    <input type="hidden" name="_subject" id="email-subject" value="Contactat des de la pàgina web">
+	  <input class="submit" type="submit" onclick="setSubject()" value="Enviar">
+
 
 </form>
   </div>
@@ -118,6 +175,11 @@ function myFunction() {
   } else { 
     x.className = x.className.replace(" w3-show", "");
   }
+}
+
+function setSubject() {
+  var x = document.getElementById("department").value;
+  document.getElementById("email-subject").innerHTML = x;
 }
 </script>
 

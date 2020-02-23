@@ -34,6 +34,26 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   opacity: 1;
   height:75%;
 }
+.overlay_small {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: left;
+}
+.container:hover .overlay_small {
+  opacity: 1;
+  height:30%;
+}
 .vl {
   border-left: 3px solid white;
   height: 30px;
